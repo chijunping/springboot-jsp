@@ -14,7 +14,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @Author: jiajiang.zheng@luckincoffee.com
  * @Date: 2019/4/11 08:59
  */
 @Configuration
@@ -25,7 +24,7 @@ public class Swagger2Configuration {
     /**
      * 扫描路径
      */
-    public final static String CONTROLLER_PACKAGE = "com.jege.spring.boot.controller";
+    public final static String CONTROLLER_PACKAGE = "com.cjp.web.controller";
 
     /**
      * 创建API应用
@@ -56,8 +55,8 @@ public class Swagger2Configuration {
         return new ApiInfoBuilder()
                 .title("Spring Cloud Example APIs")
                 .description("example for using spring cloud to create rpc communication")
-                .termsOfServiceUrl("http://www.luckincoffee.com")
-                .contact(new Contact("junping.chi", "http://www.luckincoffee.com", "junping.chi@luckincoffee.com"))
+                .termsOfServiceUrl("http://www.baidu.com")
+                .contact(new Contact("junping.chi", "http://www.baidu.com", "378344307@qq.com"))
                 .version("1.0")
                 .build();
     }

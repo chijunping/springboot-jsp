@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
- * @Auther: junping.chi@luckincoffee.com
  * @Date: 2019/5/24 15:19
  * @Description: 丰富org.apache.commons.lang3.StringUtils 工具类
  */

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @Auther: junping.chi@luckincoffee.com
  * @Date: 2019/5/23 20:49
  * @Description:
  */

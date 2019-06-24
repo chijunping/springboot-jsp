@@ -16,7 +16,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @Auther: junping.chi@luckincoffee.com
  * @Date: 2019/5/22 18:03
  * @Description: sql格式化工具类
  */

@@ -9,7 +9,6 @@ import java.util.Date;
 
 /**
  * @Description:日期相关工具类
- * @Author: sijie.chen sijie.chen@luckincoffee.com
  * @Date: 2019-03-15
  */
 public class DateUtil {

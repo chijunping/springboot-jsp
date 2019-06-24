@@ -6,6 +6,7 @@
 # *~
 .gradle/
 .idea/
+.idea/vcs.xml
 .settings/
 appcompat_v7/
 bin/

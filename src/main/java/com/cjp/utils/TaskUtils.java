@@ -19,7 +19,6 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @Auther: junping.chi@luckincoffee.com
  * @Date: 2019/5/28 16:25
  * @Description:
  */

@@ -6,7 +6,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
- * @Auther: junping.chi@luckincoffee.com
  * @Date: 2019/5/23 20:49
  * @Description:
  */
