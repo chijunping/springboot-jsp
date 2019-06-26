@@ -159,7 +159,7 @@
     </dependencies>
 
     <build>
-        <finalName>dw-web</finalName>
+        <finalName>springboot-jsp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
