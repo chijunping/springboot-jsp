@@ -19,11 +19,14 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * @author admin
  * @Date: 2019/5/28 16:25
  * @Description:
  */
 public class TaskUtils {
-    //读取外部xml（或其他配置）生成一个task
+    /**
+     * 读取外部xml（或其他配置）生成一个task
+     */
     public static void main(String[] args) throws Exception {
         createStudentByFile();
     }
@@ -120,7 +123,8 @@ public class TaskUtils {
 
         //===================反射调用clazz的指定方法——main方法
         String curDate = DateUtil.dateToString(new Date(), DateUtil.YYYY_MM_DD);
-        Constructor<?> constructor = clazz.getConstructor(String.class, String.class);//(byte[].class
+        //(byte[].class
+        Constructor<?> constructor = clazz.getConstructor(String.class, String.class);
         Object instance = constructor.newInstance("jobid_sssss", "2019-23-23");
         //直接java反射得到方法
         Method method = clazz.getMethod("main", String[].class);

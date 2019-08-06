@@ -81,12 +81,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.8.1</version>
-        </dependency>
         <!-- 基础工具 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -155,7 +149,6 @@
             <artifactId>commons-email</artifactId>
             <version>1.4</version>
         </dependency>
-
     </dependencies>
 
     <build>

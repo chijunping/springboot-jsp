@@ -111,7 +111,7 @@ public class SqlFormatUtils {
                 }
             }
             //===========================结束：逐行读取数据，装载每行长度集合 、原始字段集合、别名字段集合
-            //获取出去as 别名后，最长行的长度
+            //获取除去as 别名后，最长行的长度
             Integer max = 0;
             if (columnSourceLengthList.size() > 0) {
                 max = Collections.max(columnSourceLengthList);
@@ -133,7 +133,7 @@ public class SqlFormatUtils {
                 }
                 //columnSource 追加别名
                 if (StringUtils.isNotBlank(columnAs)) {
-                    columnSource = columnSource + AS_CAP_SPACE + columnAs;
+                    columnSource = columnSource + AS_CAP_SPACE + columnAs.trim();
                 }
                 //追加换行符
                 strbuf.append(columnSource + NEWLINE_CHAR);
