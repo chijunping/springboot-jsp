@@ -71,7 +71,18 @@ public class SqlFormatUtils {
             //===========================开始：逐行读取数据，装载每行长度集合 、原始字段集合、别名字段集合
             strbuf = new StringBuffer();
             String line;
+            boolean isFrom = true;
+            boolean isSelect = false;
             while ((line = br.readLine()) != null) {
+
+                //标记SELECT 关键字，作用：别名缩进，只参考SELECT之后的line
+                if (line.toUpperCase().contains("SELECT ")) {
+                    isSelect = true;
+                }
+                //标记FROM 关键字，作用：别名缩进，只参考from之前的line
+                if (line.toUpperCase().contains("FROM ")) {
+                    isFrom = false;
+                }
                 //去除右侧空格，并替换小写关键字as 成大写
                 line = StringUtils.trimRight(line).replace(AS_SMALL_SPACE, AS_CAP_SPACE)
                         .replace("\t", SPACE_4);
@@ -96,7 +107,9 @@ public class SqlFormatUtils {
                     //获取字段别名
                     String colAs = StringUtils.trimRight(line.substring(indexOfAs + 3));
                     //装载原始字段长度、原始字段、别名字段，的集合
-                    columnSourceLengthList.add(colSource.length());
+                    if (isFrom && isSelect) {
+                        columnSourceLengthList.add(colSource.length());
+                    }
                     columnSourceList.add(colSource);
                     columnAsList.add(colAs);
                 } else {
@@ -107,7 +120,9 @@ public class SqlFormatUtils {
                     //无as 字段别名时，往集合添加当前行完整字符串
                     columnSourceList.add(line);
                     //无as 字段别名时，往集合添加当前行完整字符串长度
-                    columnSourceLengthList.add(line.length());
+                    if (isFrom && isSelect) {
+                        columnSourceLengthList.add(line.length());
+                    }
                 }
             }
             //===========================结束：逐行读取数据，装载每行长度集合 、原始字段集合、别名字段集合
@@ -147,7 +162,6 @@ public class SqlFormatUtils {
         }
         return rsColumnsStr;
     }
-
 
     public static void main(String[] args) {
         String reg = "[^\\x00-\\xff]";
